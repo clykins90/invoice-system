@@ -1,0 +1,49 @@
+/* Add this to your global CSS */
+* {
+  scroll-behavior: smooth;
+} 
+
+.scrollable-content {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: none;
+  scroll-behavior: smooth;
+  transform: translate3d(0, 0, 0);
+} 
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  overflow: auto;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+}
+
+/* For Webkit browsers */
+::-webkit-scrollbar {
+  width: initial;
+}
+
+::-webkit-scrollbar-track {
+  background: initial;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: initial;
+  border-radius: initial;
+}
+
+/* Optimize the main content area */
+.main-content {
+  height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
